@@ -15,16 +15,16 @@
 
 <ion-content padding>
 
-  <ion-item>
-    <ion-label floating>Nombre</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label floating>DNI</ion-label>
-    <ion-input type="number"></ion-input>
-  </ion-item>
-
-  <button ion-button color="secondary" (click)="logear()">Enviar</button>
+  <form (ngSubmit)="logear()">
+      <ion-item>
+        <ion-label floating>Nombre</ion-label>
+        <ion-input type="text" [(ngModel)]="persona.nombre" name="nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>DNI</ion-label>
+        <ion-input [(ngModel)]="persona.dni" name="dni"></ion-input>
+      </ion-item>
+      <button ion-button type="submit" block>Logear</button>
+    </form>
 
 </ion-content>

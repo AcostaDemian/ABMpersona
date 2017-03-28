@@ -21,7 +21,7 @@ export class ListadoPage {
     //this.personas = [{"id":1,"nombre":"Demian","apellido":"Acosta","dni":1414},{"id":2,"nombre":"Joa","apellido":"Quin","dni":5690}];
     this.http.get('http://acostademianariel.esy.es/PPS2017/index.php/personas').map(res => res.json()).subscribe(data => {
       console.log(data);   
-        this.personas = data;
+      this.personas = data;
     });
   }
 

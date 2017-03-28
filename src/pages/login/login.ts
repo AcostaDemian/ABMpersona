@@ -14,6 +14,7 @@ import { ListadoPage } from '../listado/listado';
   templateUrl: 'login.html'
 })
 export class LoginPage {
+  persona={};
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
@@ -22,7 +23,8 @@ export class LoginPage {
   }
 
   logear() {
-    this.navCtrl.push(ListadoPage);
+    console.log(this.persona);
+    //this.navCtrl.push(ListadoPage);
   }
 
 }
